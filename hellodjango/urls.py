@@ -22,5 +22,6 @@ from appone import views as appone_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', appone_views.hello),
-    path('apptwo/', include('apptwo.urls'))
+    path('apptwo/', include('apptwo.urls')),
+    path('peoplebook/', include('peoplebook.urls'))
 ]

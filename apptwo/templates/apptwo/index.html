@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="{% static '/css/style.css' %}" type="text/css" media="screen">
 </head>
 <body>
-    {% for picture in pictures %}
-        {% with 'apptwo/'|add:picture.filename as filepath %}
-        <div class="picture">
-            <h2> {{ picture.name }}</h2>
-            <img src="{% static filepath %}" />
-        </div>
-        {% endwith %}
-    {% endfor %}
+{% for picture in pictures %}
+{% with 'apptwo/'|add:picture.filename as filepath %}
+<div class="picture">
+    <h2> {{ picture.name }}</h2>
+    <img src="{% static filepath %}"/>
+</div>
+{% endwith %}
+{% endfor %}
 </body>
 </html>
